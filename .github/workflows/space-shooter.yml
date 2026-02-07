@@ -16,14 +16,8 @@ runs-on: ubuntu-latest
 
 steps:
 
-uses: actions/checkout@v4
-
-name: Create assets directory
-
-run: mkdir -p assets
-
-uses: cz19707/gh-space-shooter@v1
-
-with:
-
-github-token: ${{ secrets. GITHUB_TOKEN }} output-path: assets/space-shooter.gif strategy: random
+    - uses: cz19707/gh-space-shooter@v1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        output-path: assets/space-shooter.gif
+        strategy: random
